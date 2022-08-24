@@ -5,7 +5,6 @@ rootProject.name = "AliucordPlugins"
 
 // Plugins are included like this
 include(
-    "MyFirstCommand",
     "MyFirstPatch"
 )
 
@@ -18,5 +17,5 @@ include(
 // then simply change the path
 rootProject.children.forEach {
     // Change kotlin to java if you'd rather use java
-    it.projectDir = file("ExamplePlugins/kotlin/${it.name}")
+    it.projectDir = file("ExamplePlugins/java/${it.name}")
 }
