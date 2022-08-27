@@ -1,11 +1,4 @@
 rootProject.name = "AliucordPlugins"
 
 
-include(
-        "MyFirstPatch"
-)
-
-rootProject.children.forEach {
-    // Change kotlin to java if you'd rather use java
-    it.projectDir = file("ExamplePlugins/java/${it.name}")
-}
+include("FxTwitterAlways")
