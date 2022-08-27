@@ -37,7 +37,7 @@ subprojects {
     }
 
     aliucord {
-        author "tonka", 4852L
+        author "tonka", 190917185709932544L
         updateUrl.set("https://raw.githubusercontent.com/tonka-92/aliucord-plugins/builds/updater.json")
         buildUrl.set("https://raw.githubusercontent.com/tonka-92/aliucord-plugins/builds/%s.zip")
     }

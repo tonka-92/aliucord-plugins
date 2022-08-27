@@ -1,20 +1,10 @@
-# `Aliucord Plugin Repo Template`
+# aliucord-plugins
+Plugins for [Aliucord](https://github.com/Aliucord)
 
-Template for an [Aliucord](https://github.com/Aliucord) plugin repo
+#### How To Download
+Click on a plugin name in README, move downloaded file to `Aliucord/plugins` folder.
 
-⚠️ Make sure you check "Include all branches" when using this template
-
- 
-## Getting started with writing your first plugin
-
-This template includes 2 example plugins demonstrating commands and patches which you can find in the ExamplePlugins folder.
-
-1. Open the root build.gradle.kts, read the comments and replace all the placeholders
-2. Familiarize yourself with the project structure. Most files are commented
-3. Build or deploy your first plugin using:
-   - Windows: `.\gradlew.bat MyFirstCommand:make` or `.\gradlew.bat MyFirstCommand:deployWithAdb`
-   - Linux & Mac: `./gradlew MyFirstCommand:make` or `./gradlew MyFirstCommand:deployWithAdb`
-
-## License
-
-Everything in this repo is released into the public domain. You may use it however you want with no conditions whatsoever
+### [FxTwitterAlways](https://github.com/tonka-92/aliucord-plugins/blob/builds/FxTwitterAlways.zip)
+Changes twitter.com links you send to the twitter fixer of your choice e.g. pxtwitter.com or fxtwitter.com.
+Also removes query string params from twitter.com links you post, and from the links you see others post.
+TODO: Change the embed created for twitter.com links to your preference of embed flavours
