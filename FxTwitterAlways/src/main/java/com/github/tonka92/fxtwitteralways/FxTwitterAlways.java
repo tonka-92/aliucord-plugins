@@ -1,4 +1,4 @@
-package com.github.tonka92;
+package com.github.tonka92.fxtwitteralways;
 
 import android.content.Context;
 import android.text.Editable;
