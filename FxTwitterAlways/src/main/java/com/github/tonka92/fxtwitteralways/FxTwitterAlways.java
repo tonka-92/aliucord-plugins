@@ -47,7 +47,7 @@ public class FxTwitterAlways extends Plugin {
 
     public static final String DEFAULT_REPLACE_DOMAIN = "pxtwitter.com";
 
-    public static final Pattern TWITTER_PATTERN = Pattern.compile("https?://(www\\.)?twitter\\.com/[^/]+/status/[\\d]+(\\?[^\\s]*)?");
+    public static final Pattern TWITTER_PATTERN = Pattern.compile("https?://(www\\.)?((x|([vfp]x)?twitter)\\.com)/[^/]+/status/[\\d]+(\\?[^\\s]*)?");
 
     public FxTwitterAlways() {
         settingsTab = new SettingsTab(PluginSettings.class).withArgs(settings);
@@ -116,9 +116,10 @@ public class FxTwitterAlways extends Plugin {
                         Matcher m = TWITTER_PATTERN.matcher(currentText);
                         while (m.find()) {
                             String linkText = m.group();
-                            String replacedText = linkText.replace("twitter.com", settings.getString(OUTGOING_REPLACE_DOMAIN, DEFAULT_REPLACE_DOMAIN));
-                            if (m.group(2) != null) {
-                                replacedText = replacedText.replace(m.group(2), "");
+                            String domainText = m.group(2);
+                            String replacedText = linkText.replace(domainText, settings.getString(OUTGOING_REPLACE_DOMAIN, DEFAULT_REPLACE_DOMAIN));
+                            if (m.group(5) != null) {
+                                replacedText = replacedText.replace(m.group(5), "");
                             }
                             newText = newText.replace(linkText, replacedText);
                         }
@@ -157,8 +158,8 @@ public class FxTwitterAlways extends Plugin {
                             String linkText = m.group();
 //                            String replacedText = linkText.replace("twitter.com", settings.getString(OUTGOING_REPLACE_DOMAIN, DEFAULT_REPLACE_DOMAIN));
                             String replacedText = linkText;
-                            if (m.group(2) != null) {
-                                replacedText = replacedText.replace(m.group(2), "");
+                            if (m.group(5) != null) {
+                                replacedText = replacedText.replace(m.group(5), "");
                             }
 //                            twitterLinks.add(replacedText);
                             newText = newText.replace(linkText, replacedText);
